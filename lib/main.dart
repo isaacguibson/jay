@@ -66,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
         MediaQuery.of(context).padding.top -
         appBar.preferredSize.height);
 
+    final double bodyWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: appBar,
       body: Container(

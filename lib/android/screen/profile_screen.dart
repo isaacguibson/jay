@@ -4,8 +4,9 @@ import 'package:percent_indicator/percent_indicator.dart';
 
 class ProfileScreen extends StatelessWidget {
   final double bodySize;
+  final double bodyWidth;
 
-  ProfileScreen(this.bodySize);
+  ProfileScreen(this.bodySize, this.bodyWidth);
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +70,48 @@ class ProfileScreen extends StatelessWidget {
                       progressColor: Colors.blue[900],
                       circularStrokeCap: CircularStrokeCap.round,
                     ),
-                    Text('Total Left: 200')
+                    Text('Total Left: 200'),
+                    Divider(),
+                    RaisedButton(
+                      child: Text(
+                        'Change Goal',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      color: Colors.blue[800],
+                      highlightColor: Colors.blue[900],
+                      onPressed: () {},
+                      elevation: 3,
+                      highlightElevation: 0,
+                    ),
+                    Container(
+                      width: bodyWidth - 20,
+                      child: Text(
+                        'Goal',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.blue[900],
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(18),
+                      width: bodyWidth - 20,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        '\$ 2.500,00',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.blue[900],
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

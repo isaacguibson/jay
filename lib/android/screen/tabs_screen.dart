@@ -60,9 +60,11 @@ class _TabsScreenState extends State<TabsScreen>
     final double bodySize = (MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top - (bottomNavigationBarSize * 2.334));
 
+    var screenWidth = MediaQuery.of(context).size.width;
+
     final List<Map<String, Object>> pages = [
       {'page': ExpensesScreen(bodySize), 'title': 'Categories'},
-      {'page': ProfileScreen(bodySize), 'title': 'Favorites'},
+      {'page': ProfileScreen(bodySize, screenWidth), 'title': 'Favorites'},
     ];
 
     return Scaffold(
